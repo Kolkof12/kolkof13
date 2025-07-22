@@ -1,102 +1,124 @@
 <!DOCTYPE html>
 <html lang="ar">
 <head>
-  <meta charset="UTF-8">
-  <title>Kolkof - المعرفة الشاملة</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ملخصات Kolkof</title>
   <style>
     body {
-      background-color: #0d0d0d;
-      color: white;
-      font-family: Tahoma, sans-serif;
-      padding: 30px;
-      text-align: center;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #0f0f0f;
+      color: #f2f2f2;
+      margin: 0;
+      padding: 0;
+      direction: rtl;
     }
-    h1 {
-      color: #00ffff;
-      margin-bottom: 10px;
-    }
-    p {
-      color: #ccc;
-    }
-    .menu {
-      margin: 40px 0;
-    }
-    button {
-      padding: 15px 25px;
-      margin: 10px;
-      font-size: 18px;
+    header {
       background-color: #111;
-      border: 2px solid #00ffff;
-      color: white;
-      cursor: pointer;
-      border-radius: 8px;
+      padding: 20px;
+      text-align: center;
+      font-size: 28px;
+      font-weight: bold;
+      color: #00ff88;
     }
-    button:hover {
-      background-color: #00ffff;
-      color: black;
+    nav {
+      background-color: #222;
+      padding: 10px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+    nav a {
+      color: #00ff88;
+      text-decoration: none;
+      font-weight: bold;
     }
     .content {
-      display: none;
-      text-align: left;
-      margin: 0 auto;
-      max-width: 700px;
-      background: #1a1a1a;
-      padding: 20px;
-      border-radius: 10px;
+      padding: 30px;
     }
-    a {
-      color: #00ffff;
-      display: block;
-      margin: 10px 0;
+    input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      margin-bottom: 20px;
+      background-color: #1a1a1a;
+      border: 1px solid #333;
+      color: #fff;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    th, td {
+      border: 1px solid #333;
+      padding: 12px;
+      text-align: center;
+    }
+    th {
+      background-color: #00ff88;
+      color: #000;
+    }
+    tr:nth-child(even) {
+      background-color: #1c1c1c;
     }
   </style>
 </head>
 <body>
-  <h1>مرحباً بك في موقع Kolkof</h1>
-  <p>اختر القسم الذي تريد تصفحه 👇</p>
 
-  <div class="menu">
-    <button onclick="show('cyber')">🔐 الأمن السيبراني</button>
-    <button onclick="show('programming')">💻 البرمجة</button>
-    <button onclick="show('summaries')">📚 ملخصات تعليمية</button>
-    <button onclick="show('band')">🛡️ ثغرات باند</button>
-  </div>
+  <header>موقع Kolkof - ملخصات تعليمية</header>
 
-  <div id="cyber" class="content">
-    <h2>🔐 الأمن السيبراني</h2>
-    <a href="#">مقدمة في اختبار الاختراق</a>
-    <a href="#">دليل أدوات Kali Linux</a>
-    <a href="#">كيفية استخدام Nmap</a>
-  </div>
+  <nav>
+    <a href="#">الرئيسية</a>
+    <a href="#cyber-tools">ملخصات تعليمية</a>
+    <a href="#">روابط التواصل</a>
+  </nav>
 
-  <div id="programming" class="content">
-    <h2>💻 البرمجة</h2>
-    <a href="#">بايثون للمبتدئين</a>
-    <a href="#">برمجة واجهات المواقع</a>
-    <a href="#">مشاريع صغيرة لتعلم البرمجة</a>
-  </div>
+  <div class="content" id="cyber-tools">
+    <h2>🔐 ملخص أدوات كالي لينكس و BlackArch</h2>
+    <p>أدناه قائمة بأهم الأدوات الخطيرة والمفيدة في مجال الأمن السيبراني.</p>
+    
+    <input type="text" id="searchInput" placeholder="ابحث عن أداة مثل Hydra أو Wireshark...">
 
-  <div id="summaries" class="content">
-    <h2>📚 ملخصات تعليمية</h2>
-    <a href="#">ملخص الأمن المعلوماتي</a>
-    <a href="#">ملخص الشبكات</a>
-    <a href="#">ملخص قواعد البيانات</a>
-  </div>
-
-  <div id="band" class="content">
-    <h2>🛡️ ثغرات باند</h2>
-    <a href="#">ثغرة باند في Free Fire</a>
-    <a href="#">سحب حساب عبر رابط</a>
-    <a href="#">تجاوز حظر جهاز</a>
+    <table id="toolsTable">
+      <thead>
+        <tr>
+          <th>اسم الأداة</th>
+          <th>النظام</th>
+          <th>الوظيفة</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Nmap</td><td>Kali / BlackArch</td><td>مسح الشبكات وكشف الأجهزة والخدمات</td></tr>
+        <tr><td>Metasploit</td><td>Kali / BlackArch</td><td>استغلال الثغرات واختبار الاختراق</td></tr>
+        <tr><td>Wireshark</td><td>Kali / BlackArch</td><td>تحليل الشبكة والتجسس على الحزم</td></tr>
+        <tr><td>Aircrack-ng</td><td>Kali / BlackArch</td><td>اختراق شبكات Wi-Fi</td></tr>
+        <tr><td>Hydra</td><td>Kali / BlackArch</td><td>هجمات تخمين كلمات السر</td></tr>
+        <tr><td>John the Ripper</td><td>Kali / BlackArch</td><td>كسر كلمات المرور</td></tr>
+        <tr><td>Burp Suite</td><td>Kali</td><td>تحليل واختبار تطبيقات الويب</td></tr>
+        <tr><td>sqlmap</td><td>Kali / BlackArch</td><td>ثغرات SQL Injection</td></tr>
+        <tr><td>Bettercap</td><td>Kali / BlackArch</td><td>هجمات MITM</td></tr>
+        <tr><td>SET</td><td>Kali</td><td>هجمات الهندسة الاجتماعية</td></tr>
+        <tr><td>BeEF</td><td>Kali / BlackArch</td><td>استغلال متصفحات الضحايا</td></tr>
+        <tr><td>Reaver</td><td>Kali</td><td>اختراق WPS</td></tr>
+        <tr><td>Snort</td><td>BlackArch</td><td>نظام كشف التسلل</td></tr>
+        <tr><td>Nikto</td><td>Kali / BlackArch</td><td>مسح خوادم الويب</td></tr>
+        <tr><td>Recon-ng</td><td>Kali / BlackArch</td><td>جمع معلومات OSINT</td></tr>
+      </tbody>
+    </table>
   </div>
 
   <script>
-    function show(id) {
-      document.querySelectorAll('.content').forEach(div => {
-        div.style.display = 'none';
+    // فلترة الجدول عبر البحث
+    const searchInput = document.getElementById('searchInput');
+    searchInput.addEventListener('keyup', () => {
+      const filter = searchInput.value.toLowerCase();
+      const rows = document.querySelectorAll("#toolsTable tbody tr");
+
+      rows.forEach(row => {
+        const text = row.textContent.toLowerCase();
+        row.style.display = text.includes(filter) ? '' : 'none';
       });
-      document.getElementById(id).style.display = 'block';
-    }
+    });
   </script>
 </body>
 </html>
