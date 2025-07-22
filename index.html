@@ -1,96 +1,102 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kolkof | المحتوى</title>
+  <title>Kolkof - المعرفة الشاملة</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background-color: #0f0f0f;
-      color: #fff;
+      background-color: #0d0d0d;
+      color: white;
+      font-family: Tahoma, sans-serif;
+      padding: 30px;
       text-align: center;
-      padding: 20px;
     }
-
     h1 {
-      color: #00ffae;
+      color: #00ffff;
+      margin-bottom: 10px;
     }
-
-    .buttons {
-      margin: 30px 0;
+    p {
+      color: #ccc;
     }
-
+    .menu {
+      margin: 40px 0;
+    }
     button {
-      background-color: #00ffae;
-      color: #000;
-      border: none;
-      padding: 12px 20px;
+      padding: 15px 25px;
       margin: 10px;
       font-size: 18px;
+      background-color: #111;
+      border: 2px solid #00ffff;
+      color: white;
       cursor: pointer;
-      border-radius: 10px;
+      border-radius: 8px;
     }
-
+    button:hover {
+      background-color: #00ffff;
+      color: black;
+    }
     .content {
       display: none;
-      margin-top: 30px;
+      text-align: left;
+      margin: 0 auto;
+      max-width: 700px;
       background: #1a1a1a;
       padding: 20px;
       border-radius: 10px;
     }
-
-    footer {
-      margin-top: 50px;
-      font-size: 14px;
-      color: #999;
-    }
-
     a {
-      color: #00ffae;
-      text-decoration: none;
+      color: #00ffff;
+      display: block;
+      margin: 10px 0;
     }
   </style>
 </head>
 <body>
-
   <h1>مرحباً بك في موقع Kolkof</h1>
-  <p>اختر نوع المحتوى الذي تريده</p>
+  <p>اختر القسم الذي تريد تصفحه 👇</p>
 
-  <div class="buttons">
-    <button onclick="showContent('cyber')">🛡️ تعليم الأمن السيبراني</button>
-    <button onclick="showContent('vuln')">🐞 ثغرات باند</button>
-    <button onclick="showContent('summaries')">📚 ملخصات تعليمية</button>
+  <div class="menu">
+    <button onclick="show('cyber')">🔐 الأمن السيبراني</button>
+    <button onclick="show('programming')">💻 البرمجة</button>
+    <button onclick="show('summaries')">📚 ملخصات تعليمية</button>
+    <button onclick="show('band')">🛡️ ثغرات باند</button>
   </div>
 
   <div id="cyber" class="content">
-    <h2>تعليم الأمن السيبراني</h2>
-    <p>🔐 ملخصات ودروس حول مفاهيم الأمن السيبراني، مثل التشفير، الفحص، الحماية، وأنواع الهجمات...</p>
+    <h2>🔐 الأمن السيبراني</h2>
+    <a href="#">مقدمة في اختبار الاختراق</a>
+    <a href="#">دليل أدوات Kali Linux</a>
+    <a href="#">كيفية استخدام Nmap</a>
   </div>
 
-  <div id="vuln" class="content">
-    <h2>ثغرات باند</h2>
-    <p>📂 قائمة بأشهر الثغرات مع تفاصيل قصيرة عنها، مثل ثغرات XSS، SQLi، RCE...</p>
+  <div id="programming" class="content">
+    <h2>💻 البرمجة</h2>
+    <a href="#">بايثون للمبتدئين</a>
+    <a href="#">برمجة واجهات المواقع</a>
+    <a href="#">مشاريع صغيرة لتعلم البرمجة</a>
   </div>
 
   <div id="summaries" class="content">
-    <h2>ملخصات تعليمية</h2>
-    <p>📖 ملخصات لمواضيع في البرمجة، الشبكات، أنظمة التشغيل وغيرها بطريقة مبسطة.</p>
+    <h2>📚 ملخصات تعليمية</h2>
+    <a href="#">ملخص الأمن المعلوماتي</a>
+    <a href="#">ملخص الشبكات</a>
+    <a href="#">ملخص قواعد البيانات</a>
   </div>
 
-  <footer>
-    تواصل معي: 
-    <br>
-    Instagram: <a href="https://instagram.com/_t7.l" target="_blank">@_t7.l</a> / <a href="https://instagram.com/elqerx" target="_blank">@elqerx</a> <br>
-    Telegram: <a href="https://t.me/DZ_HJ" target="_blank">@DZ_HJ</a>
-  </footer>
+  <div id="band" class="content">
+    <h2>🛡️ ثغرات باند</h2>
+    <a href="#">ثغرة باند في Free Fire</a>
+    <a href="#">سحب حساب عبر رابط</a>
+    <a href="#">تجاوز حظر جهاز</a>
+  </div>
 
   <script>
-    function showContent(id) {
-      document.querySelectorAll('.content').forEach(div => div.style.display = 'none');
+    function show(id) {
+      document.querySelectorAll('.content').forEach(div => {
+        div.style.display = 'none';
+      });
       document.getElementById(id).style.display = 'block';
     }
   </script>
-
 </body>
 </html>
