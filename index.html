@@ -1,122 +1,128 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>ملخصات Kolkof</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kolkof - ملخصات أمن سيبراني</title>
   <style>
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #0f0f0f;
-      color: #f2f2f2;
+      font-family: sans-serif;
       margin: 0;
       padding: 0;
-      direction: rtl;
+      background-color: #0f0f0f;
+      color: #f0f0f0;
     }
     header {
       background-color: #111;
-      padding: 20px;
+      padding: 15px;
       text-align: center;
-      font-size: 28px;
-      font-weight: bold;
-      color: #00ff88;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 24px;
     }
     nav {
-      background-color: #222;
-      padding: 10px;
       display: flex;
+      flex-wrap: wrap;
       justify-content: center;
-      gap: 20px;
+      background-color: #222;
     }
-    nav a {
-      color: #00ff88;
-      text-decoration: none;
-      font-weight: bold;
+    nav button {
+      margin: 5px;
+      padding: 10px 20px;
+      background-color: #333;
+      border: none;
+      color: white;
+      cursor: pointer;
     }
-    .content {
-      padding: 30px;
+    nav button:hover {
+      background-color: #555;
     }
-    input[type="text"] {
-      width: 100%;
-      padding: 10px;
-      font-size: 16px;
-      margin-bottom: 20px;
-      background-color: #1a1a1a;
-      border: 1px solid #333;
-      color: #fff;
+    #content {
+      padding: 20px;
     }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-    }
-    th, td {
-      border: 1px solid #333;
-      padding: 12px;
+    .search-box {
+      margin: 15px auto;
       text-align: center;
     }
-    th {
-      background-color: #00ff88;
-      color: #000;
+    .search-box input {
+      width: 90%;
+      max-width: 400px;
+      padding: 10px;
+      font-size: 16px;
     }
-    tr:nth-child(even) {
-      background-color: #1c1c1c;
+    .section {
+      margin-bottom: 30px;
+    }
+    .section h2 {
+      color: #00ffcc;
+    }
+    @media screen and (max-width: 600px) {
+      header h1 {
+        font-size: 18px;
+      }
+      nav button {
+        padding: 8px 15px;
+        font-size: 14px;
+      }
     }
   </style>
 </head>
 <body>
-
-  <header>موقع Kolkof - ملخصات تعليمية</header>
+  <header>
+    <h1>Kolkof - موقع تعليم الأمن السيبراني</h1>
+  </header>
 
   <nav>
-    <a href="#">الرئيسية</a>
-    <a href="#cyber-tools">ملخصات تعليمية</a>
-    <a href="#">روابط التواصل</a>
+    <button onclick="showSection('summaries')">📚 ملخصات تعليمية</button>
+    <button onclick="showSection('tools')">🛠️ أدوات كالي وبلاك آرش</button>
+    <button onclick="window.open('https://instagram.com/_t7.l')">📸 Instagram</button>
+    <button onclick="window.open('https://t.me/DZ_HJ')">📨 Telegram</button>
   </nav>
 
-  <div class="content" id="cyber-tools">
-    <h2>🔐 ملخص أدوات كالي لينكس و BlackArch</h2>
-    <p>أدناه قائمة بأهم الأدوات الخطيرة والمفيدة في مجال الأمن السيبراني.</p>
-    
-    <input type="text" id="searchInput" placeholder="ابحث عن أداة مثل Hydra أو Wireshark...">
+  <div class="search-box">
+    <input type="text" id="searchInput" placeholder="ابحث عن مصطلح...">
+  </div>
 
-    <table id="toolsTable">
-      <thead>
-        <tr>
-          <th>اسم الأداة</th>
-          <th>النظام</th>
-          <th>الوظيفة</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr><td>Nmap</td><td>Kali / BlackArch</td><td>مسح الشبكات وكشف الأجهزة والخدمات</td></tr>
-        <tr><td>Metasploit</td><td>Kali / BlackArch</td><td>استغلال الثغرات واختبار الاختراق</td></tr>
-        <tr><td>Wireshark</td><td>Kali / BlackArch</td><td>تحليل الشبكة والتجسس على الحزم</td></tr>
-        <tr><td>Aircrack-ng</td><td>Kali / BlackArch</td><td>اختراق شبكات Wi-Fi</td></tr>
-        <tr><td>Hydra</td><td>Kali / BlackArch</td><td>هجمات تخمين كلمات السر</td></tr>
-        <tr><td>John the Ripper</td><td>Kali / BlackArch</td><td>كسر كلمات المرور</td></tr>
-        <tr><td>Burp Suite</td><td>Kali</td><td>تحليل واختبار تطبيقات الويب</td></tr>
-        <tr><td>sqlmap</td><td>Kali / BlackArch</td><td>ثغرات SQL Injection</td></tr>
-        <tr><td>Bettercap</td><td>Kali / BlackArch</td><td>هجمات MITM</td></tr>
-        <tr><td>SET</td><td>Kali</td><td>هجمات الهندسة الاجتماعية</td></tr>
-        <tr><td>BeEF</td><td>Kali / BlackArch</td><td>استغلال متصفحات الضحايا</td></tr>
-        <tr><td>Reaver</td><td>Kali</td><td>اختراق WPS</td></tr>
-        <tr><td>Snort</td><td>BlackArch</td><td>نظام كشف التسلل</td></tr>
-        <tr><td>Nikto</td><td>Kali / BlackArch</td><td>مسح خوادم الويب</td></tr>
-        <tr><td>Recon-ng</td><td>Kali / BlackArch</td><td>جمع معلومات OSINT</td></tr>
-      </tbody>
-    </table>
+  <div id="content">
+    <div id="summaries" class="section" style="display:none;">
+      <h2>📚 ملخصات الأمن السيبراني</h2>
+      <ul id="summaryList">
+        <li>🔰 مقدمة عن الأمن السيبراني</li>
+        <li>💻 مفاهيم الشبكات والبروتوكولات</li>
+        <li>🧠 تحليل الثغرات</li>
+        <li>🛡️ اختبار الاختراق - مراحل وطرق</li>
+        <li>👨‍💻 الهندسة الاجتماعية</li>
+        <li>💣 استغلال الثغرات العملية (Metasploit وغيرها)</li>
+      </ul>
+    </div>
+
+    <div id="tools" class="section" style="display:none;">
+      <h2>🛠️ أدوات كالي لينكس و بلاك آرش</h2>
+      <ul>
+        <li><strong>nmap</strong>: فحص الشبكات واكتشاف الأجهزة.</li>
+        <li><strong>hydra</strong>: تخمين كلمات السر للعديد من البروتوكولات.</li>
+        <li><strong>sqlmap</strong>: استغلال ثغرات SQL Injection تلقائياً.</li>
+        <li><strong>aircrack-ng</strong>: اختراق شبكات الواي فاي.</li>
+        <li><strong>wireshark</strong>: تحليل حزم الشبكة.</li>
+        <li><strong>burpsuite</strong>: اختبار أمان تطبيقات الويب.</li>
+      </ul>
+    </div>
   </div>
 
   <script>
-    // فلترة الجدول عبر البحث
-    const searchInput = document.getElementById('searchInput');
-    searchInput.addEventListener('keyup', () => {
-      const filter = searchInput.value.toLowerCase();
-      const rows = document.querySelectorAll("#toolsTable tbody tr");
+    function showSection(sectionId) {
+      document.getElementById('summaries').style.display = 'none';
+      document.getElementById('tools').style.display = 'none';
+      document.getElementById(sectionId).style.display = 'block';
+    }
 
-      rows.forEach(row => {
-        const text = row.textContent.toLowerCase();
-        row.style.display = text.includes(filter) ? '' : 'none';
+    // Search filter
+    document.getElementById('searchInput').addEventListener('input', function () {
+      const filter = this.value.toLowerCase();
+      const items = document.querySelectorAll('#summaryList li');
+      items.forEach(item => {
+        item.style.display = item.textContent.toLowerCase().includes(filter) ? '' : 'none';
       });
     });
   </script>
