@@ -1,158 +1,137 @@
+
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Kolkof | ملخصات الأمن السيبراني</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kolkof | ملخصات أمن سيبراني</title>
   <style>
     body {
-      font-family: sans-serif;
-      background-color: #0f0f0f;
-      color: #ffffff;
-      margin: 0;
-      padding: 0;
-    }
-    header {
-      background-color: #1a1a1a;
-      padding: 15px;
-      text-align: center;
-      font-size: 24px;
-      font-weight: bold;
-    }
-    nav {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 10px;
-      background-color: #222;
-      padding: 10px;
-    }
-    nav button {
-      background-color: #333;
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      cursor: pointer;
-      border-radius: 8px;
-    }
-    nav button:hover {
-      background-color: #444;
-    }
-    .content {
+      background-color: #0d1117;
+      color: #c9d1d9;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.8;
       padding: 20px;
     }
-    .search-box {
-      text-align: center;
-      margin-bottom: 20px;
+    h1, h2, h3 {
+      color: #58a6ff;
     }
-    input[type="text"] {
+    section {
+      margin-bottom: 40px;
+    }
+    ul {
+      list-style-type: square;
+    }
+    .container {
+      max-width: 1000px;
+      margin: auto;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+    th, td {
+      border: 1px solid #333;
       padding: 10px;
-      width: 90%;
-      max-width: 400px;
-      border-radius: 10px;
-      border: none;
+      text-align: right;
     }
-    .section {
-      margin-bottom: 30px;
-    }
-    .section h2 {
-      font-size: 20px;
-      border-bottom: 1px solid #444;
-      padding-bottom: 5px;
-      margin-bottom: 10px;
-    }
-    .tool {
-      margin: 10px 0;
-      padding: 10px;
-      background-color: #1c1c1c;
-      border-radius: 8px;
-    }
-    .tool span {
-      font-weight: bold;
-      color: #00ff99;
-    }
-
-    footer {
-      background-color: #111;
-      text-align: center;
-      padding: 15px;
-      font-size: 14px;
-    }
-
-    @media (max-width: 600px) {
-      nav {
-        flex-direction: column;
-      }
+    th {
+      background-color: #161b22;
     }
   </style>
 </head>
 <body>
+  <div class="container">
+    <h1>📘 ملخصات تعليمية في الأمن السيبراني</h1>
 
-<header>🛡️ Kolkof - ملخصات الأمن السيبراني</header>
+    <section>
+      <h2>🔐 الأمن السيبراني</h2>
+      <p><strong>ما هو؟</strong> الأمن السيبراني هو مجموعة من الممارسات والتقنيات المصممة لحماية الشبكات، الأنظمة، الأجهزة، والبيانات من الهجمات الرقمية. الهدف الرئيسي منه هو الحفاظ على سرية المعلومات، سلامتها، وتوفرها.</p>
+      <h3>أنواعه:</h3>
+      <ul>
+        <li><strong>أمن الشبكات:</strong> حماية البيانات أثناء التنقل باستخدام الجدران النارية وتقنيات VPN.</li>
+        <li><strong>أمن التطبيقات:</strong> تقوية البرامج خلال التطوير ضد الثغرات.</li>
+        <li><strong>أمن البيانات:</strong> حماية البيانات بالتشفير والتحكم في الوصول.</li>
+        <li><strong>الأمن السحابي:</strong> تأمين البيانات المخزنة على الخدمات السحابية.</li>
+        <li><strong>أمن الأجهزة:</strong> حماية أجهزة المستخدمين من البرمجيات الخبيثة.</li>
+        <li><strong>أمن العمليات:</strong> تنظيم من يصل إلى ماذا ومتى.</li>
+        <li><strong>أمن الهوية:</strong> إدارة صلاحيات الوصول باستخدام التوثيق والتحقق.</li>
+      </ul>
+      <h3>المصطلحات الأساسية:</h3>
+      <table>
+        <tr><th>المصطلح</th><th>التعريف</th></tr>
+        <tr><td>Firewall</td><td>جدار ناري يمنع التهديدات من الوصول للشبكة</td></tr>
+        <tr><td>Encryption</td><td>تحويل البيانات إلى صيغة غير مفهومة لحمايتها</td></tr>
+        <tr><td>VPN</td><td>شبكة افتراضية تخفي هوية ومكان المستخدم</td></tr>
+        <tr><td>Phishing</td><td>هجوم يخدع المستخدم للحصول على معلوماته</td></tr>
+        <tr><td>Malware</td><td>برمجيات خبيثة تشمل الفيروسات والديدان</td></tr>
+        <tr><td>Zero-Day</td><td>ثغرة لم تُكتشف بعد من الشركات</td></tr>
+        <tr><td>Penetration Testing</td><td>اختبار اختراق لتقييم أمان النظام</td></tr>
+        <tr><td>IDS/IPS</td><td>أنظمة كشف ومنع التسلل</td></tr>
+      </table>
+    </section>
 
-<nav>
-  <button onclick="showSection('summaries')">📚 ملخصات تعليمية</button>
-  <button onclick="showSection('tools')">🛠️ أدوات كالي وبلاك آرتش</button>
-  <button onclick="showSection('contact')">📞 تواصل معنا</button>
-</nav>
+    <section>
+      <h2>💥 الثغرات الأمنية</h2>
+      <p>الثغرة الأمنية هي خلل أو ضعف في برنامج يُمكن استغلاله لتنفيذ أعمال ضارة.</p>
+      <h3>الأنواع:</h3>
+      <table>
+        <tr><th>الثغرة</th><th>الشرح</th></tr>
+        <tr><td>XSS</td><td>تنفيذ أكواد JavaScript داخل موقع يخدع المستخدم</td></tr>
+        <tr><td>SQL Injection</td><td>حقن أوامر SQL للوصول إلى قاعدة البيانات</td></tr>
+        <tr><td>CSRF</td><td>إجبار المستخدم على تنفيذ إجراء دون علمه</td></tr>
+        <tr><td>RCE</td><td>تنفيذ أوامر عن بُعد على الخادم</td></tr>
+        <tr><td>LFI / RFI</td><td>إدراج ملفات داخلية أو خارجية إلى النظام</td></tr>
+        <tr><td>IDOR</td><td>الوصول إلى بيانات مستخدمين آخرين بتعديل المعرفات</td></tr>
+        <tr><td>Clickjacking</td><td>خداع المستخدم للضغط على عناصر خفية</td></tr>
+        <tr><td>Buffer Overflow</td><td>إدخال بيانات أكثر من حجم الذاكرة وتنفيذ أكواد</td></tr>
+        <tr><td>Command Injection</td><td>إدخال أوامر نظام مباشرة في الواجهة</td></tr>
+        <tr><td>Path Traversal</td><td>الوصول إلى ملفات غير مصرح بها</td></tr>
+      </table>
+      <h3>طرق كشفها:</h3>
+      <ul>
+        <li>Burp Suite</li>
+        <li>OWASP ZAP</li>
+        <li>Nmap + NSE scripts</li>
+        <li>Manual Testing (يدوي)</li>
+      </ul>
+      <h3>كيف تعمل؟</h3>
+      <p>يتم إدخال أكواد ضارة في نقاط ضعف. إذا لم يكن هناك تحقق صحيح، يتم تنفيذ الكود على النظام.</p>
+    </section>
 
-<div class="content">
-  <div class="search-box">
-    <input type="text" id="search" placeholder="ابحث عن مصطلح أو أداة..." onkeyup="searchContent()">
+    <section>
+      <h2>🛠️ أدوات Kali Linux</h2>
+      <table>
+        <tr><th>الأداة</th><th>التعريف</th></tr>
+        <tr><td>Nmap</td><td>فحص الشبكات ومعرفة الأجهزة والبورتات المفتوحة</td></tr>
+        <tr><td>Metasploit</td><td>منصة استغلال الثغرات تلقائيًا</td></tr>
+        <tr><td>Wireshark</td><td>تحليل مرور الشبكة واستخراج البيانات</td></tr>
+        <tr><td>Burp Suite</td><td>اختبار ثغرات تطبيقات الويب</td></tr>
+        <tr><td>Aircrack-ng</td><td>اختراق شبكات الواي فاي</td></tr>
+        <tr><td>John the Ripper</td><td>كسر كلمات المرور بالقوة الغاشمة</td></tr>
+        <tr><td>Hydra</td><td>تجربة كلمات مرور متعددة لاختراق الدخول</td></tr>
+        <tr><td>Netcat</td><td>أداة اتصال وتنفيذ أوامر عبر الشبكة</td></tr>
+        <tr><td>Sqlmap</td><td>استغلال ثغرات SQL بشكل أوتوماتيكي</td></tr>
+      </table>
+    </section>
+
+    <section>
+      <h2>💻 أدوات Arch Linux</h2>
+      <table>
+        <tr><th>الأداة</th><th>التعريف</th></tr>
+        <tr><td>Pacman</td><td>مدير الحزم الرسمي لتثبيت وتحديث البرامج</td></tr>
+        <tr><td>Yay / Paru</td><td>أدوات AUR لتثبيت البرامج من مستودعات المجتمع</td></tr>
+        <tr><td>Lynis</td><td>أداة تدقيق أمان النظام</td></tr>
+        <tr><td>ExploitDB</td><td>قاعدة بيانات للثغرات قابلة للبحث والتجربة</td></tr>
+        <tr><td>Nmap / Wireshark / Netcat</td><td>أدوات الشبكة والفحص والحزم</td></tr>
+      </table>
+    </section>
+
+    <footer>
+      <p style="text-align:center; color:gray;">تم الإنشاء بواسطة Kolkof — جميع الحقوق محفوظة 2025</p>
+    </footer>
   </div>
-
-  <div id="summaries" class="section">
-    <h2>📚 ملخصات الأمن السيبراني</h2>
-    <ul id="summaryList">
-      <li>أساسيات أمن المعلومات</li>
-      <li>الهندسة الاجتماعية</li>
-      <li>التشفير (Cryptography)</li>
-      <li>تحليل البرمجيات الخبيثة</li>
-      <li>اختبار الاختراق (Penetration Testing)</li>
-      <li>الأدلة الجنائية الرقمية</li>
-      <li>التحليل الشبكي</li>
-      <li>الأمن في التطبيقات</li>
-      <li>التهديدات المتقدمة APT</li>
-    </ul>
-  </div>
-
-  <div id="tools" class="section" style="display:none;">
-    <h2>🛠️ أدوات كالي وبلاك آرتش</h2>
-    <div class="tool"><span>John the Ripper</span>: أداة لكسر كلمات السر</div>
-    <div class="tool"><span>Nmap</span>: لفحص الشبكات والثغرات</div>
-    <div class="tool"><span>Burp Suite</span>: لاختبار أمان تطبيقات الويب</div>
-    <div class="tool"><span>Metasploit</span>: لاختبار الاختراق واستغلال الثغرات</div>
-    <div class="tool"><span>Aircrack-ng</span>: لاختراق شبكات Wi-Fi</div>
-    <div class="tool"><span>Hydra</span>: لهجمات تخمين كلمات المرور</div>
-  </div>
-
-  <div id="contact" class="section" style="display:none;">
-    <h2>📞 تواصل معنا</h2>
-    <p>Instagram: <a href="https://instagram.com/_t7.l" target="_blank">@_t7.l</a> / <a href="https://instagram.com/elqerx" target="_blank">@elqerx</a></p>
-    <p>Telegram: <a href="https://t.me/DZ_HJ" target="_blank">@DZ_HJ</a></p>
-  </div>
-</div>
-
-<footer>
-  © 2025 Kolkof. جميع الحقوق محفوظة.
-</footer>
-
-<script>
-  function showSection(id) {
-    document.getElementById('summaries').style.display = 'none';
-    document.getElementById('tools').style.display = 'none';
-    document.getElementById('contact').style.display = 'none';
-    document.getElementById(id).style.display = 'block';
-  }
-
-  function searchContent() {
-    const query = document.getElementById("search").value.toLowerCase();
-    const items = document.querySelectorAll("#summaryList li");
-    items.forEach(item => {
-      item.style.display = item.textContent.toLowerCase().includes(query) ? "list-item" : "none";
-    });
-  }
-</script>
-
+</section>
 </body>
 </html>
