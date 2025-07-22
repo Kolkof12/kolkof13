@@ -1,130 +1,158 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Kolkof - ملخصات أمن سيبراني</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kolkof | ملخصات الأمن السيبراني</title>
   <style>
     body {
       font-family: sans-serif;
+      background-color: #0f0f0f;
+      color: #ffffff;
       margin: 0;
       padding: 0;
-      background-color: #0f0f0f;
-      color: #f0f0f0;
     }
     header {
-      background-color: #111;
+      background-color: #1a1a1a;
       padding: 15px;
       text-align: center;
-    }
-    header h1 {
-      margin: 0;
       font-size: 24px;
+      font-weight: bold;
     }
     nav {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
+      gap: 10px;
       background-color: #222;
+      padding: 10px;
     }
     nav button {
-      margin: 5px;
-      padding: 10px 20px;
       background-color: #333;
-      border: none;
       color: white;
+      border: none;
+      padding: 10px 20px;
       cursor: pointer;
+      border-radius: 8px;
     }
     nav button:hover {
-      background-color: #555;
+      background-color: #444;
     }
-    #content {
+    .content {
       padding: 20px;
     }
     .search-box {
-      margin: 15px auto;
       text-align: center;
+      margin-bottom: 20px;
     }
-    .search-box input {
+    input[type="text"] {
+      padding: 10px;
       width: 90%;
       max-width: 400px;
-      padding: 10px;
-      font-size: 16px;
+      border-radius: 10px;
+      border: none;
     }
     .section {
       margin-bottom: 30px;
     }
     .section h2 {
-      color: #00ffcc;
+      font-size: 20px;
+      border-bottom: 1px solid #444;
+      padding-bottom: 5px;
+      margin-bottom: 10px;
     }
-    @media screen and (max-width: 600px) {
-      header h1 {
-        font-size: 18px;
-      }
-      nav button {
-        padding: 8px 15px;
-        font-size: 14px;
+    .tool {
+      margin: 10px 0;
+      padding: 10px;
+      background-color: #1c1c1c;
+      border-radius: 8px;
+    }
+    .tool span {
+      font-weight: bold;
+      color: #00ff99;
+    }
+
+    footer {
+      background-color: #111;
+      text-align: center;
+      padding: 15px;
+      font-size: 14px;
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
       }
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Kolkof - موقع تعليم الأمن السيبراني</h1>
-  </header>
 
-  <nav>
-    <button onclick="showSection('summaries')">📚 ملخصات تعليمية</button>
-    <button onclick="showSection('tools')">🛠️ أدوات كالي وبلاك آرش</button>
-    <button onclick="window.open('https://instagram.com/_t7.l')">📸 Instagram</button>
-    <button onclick="window.open('https://t.me/DZ_HJ')">📨 Telegram</button>
-  </nav>
+<header>🛡️ Kolkof - ملخصات الأمن السيبراني</header>
 
+<nav>
+  <button onclick="showSection('summaries')">📚 ملخصات تعليمية</button>
+  <button onclick="showSection('tools')">🛠️ أدوات كالي وبلاك آرتش</button>
+  <button onclick="showSection('contact')">📞 تواصل معنا</button>
+</nav>
+
+<div class="content">
   <div class="search-box">
-    <input type="text" id="searchInput" placeholder="ابحث عن مصطلح...">
+    <input type="text" id="search" placeholder="ابحث عن مصطلح أو أداة..." onkeyup="searchContent()">
   </div>
 
-  <div id="content">
-    <div id="summaries" class="section" style="display:none;">
-      <h2>📚 ملخصات الأمن السيبراني</h2>
-      <ul id="summaryList">
-        <li>🔰 مقدمة عن الأمن السيبراني</li>
-        <li>💻 مفاهيم الشبكات والبروتوكولات</li>
-        <li>🧠 تحليل الثغرات</li>
-        <li>🛡️ اختبار الاختراق - مراحل وطرق</li>
-        <li>👨‍💻 الهندسة الاجتماعية</li>
-        <li>💣 استغلال الثغرات العملية (Metasploit وغيرها)</li>
-      </ul>
-    </div>
-
-    <div id="tools" class="section" style="display:none;">
-      <h2>🛠️ أدوات كالي لينكس و بلاك آرش</h2>
-      <ul>
-        <li><strong>nmap</strong>: فحص الشبكات واكتشاف الأجهزة.</li>
-        <li><strong>hydra</strong>: تخمين كلمات السر للعديد من البروتوكولات.</li>
-        <li><strong>sqlmap</strong>: استغلال ثغرات SQL Injection تلقائياً.</li>
-        <li><strong>aircrack-ng</strong>: اختراق شبكات الواي فاي.</li>
-        <li><strong>wireshark</strong>: تحليل حزم الشبكة.</li>
-        <li><strong>burpsuite</strong>: اختبار أمان تطبيقات الويب.</li>
-      </ul>
-    </div>
+  <div id="summaries" class="section">
+    <h2>📚 ملخصات الأمن السيبراني</h2>
+    <ul id="summaryList">
+      <li>أساسيات أمن المعلومات</li>
+      <li>الهندسة الاجتماعية</li>
+      <li>التشفير (Cryptography)</li>
+      <li>تحليل البرمجيات الخبيثة</li>
+      <li>اختبار الاختراق (Penetration Testing)</li>
+      <li>الأدلة الجنائية الرقمية</li>
+      <li>التحليل الشبكي</li>
+      <li>الأمن في التطبيقات</li>
+      <li>التهديدات المتقدمة APT</li>
+    </ul>
   </div>
 
-  <script>
-    function showSection(sectionId) {
-      document.getElementById('summaries').style.display = 'none';
-      document.getElementById('tools').style.display = 'none';
-      document.getElementById(sectionId).style.display = 'block';
-    }
+  <div id="tools" class="section" style="display:none;">
+    <h2>🛠️ أدوات كالي وبلاك آرتش</h2>
+    <div class="tool"><span>John the Ripper</span>: أداة لكسر كلمات السر</div>
+    <div class="tool"><span>Nmap</span>: لفحص الشبكات والثغرات</div>
+    <div class="tool"><span>Burp Suite</span>: لاختبار أمان تطبيقات الويب</div>
+    <div class="tool"><span>Metasploit</span>: لاختبار الاختراق واستغلال الثغرات</div>
+    <div class="tool"><span>Aircrack-ng</span>: لاختراق شبكات Wi-Fi</div>
+    <div class="tool"><span>Hydra</span>: لهجمات تخمين كلمات المرور</div>
+  </div>
 
-    // Search filter
-    document.getElementById('searchInput').addEventListener('input', function () {
-      const filter = this.value.toLowerCase();
-      const items = document.querySelectorAll('#summaryList li');
-      items.forEach(item => {
-        item.style.display = item.textContent.toLowerCase().includes(filter) ? '' : 'none';
-      });
+  <div id="contact" class="section" style="display:none;">
+    <h2>📞 تواصل معنا</h2>
+    <p>Instagram: <a href="https://instagram.com/_t7.l" target="_blank">@_t7.l</a> / <a href="https://instagram.com/elqerx" target="_blank">@elqerx</a></p>
+    <p>Telegram: <a href="https://t.me/DZ_HJ" target="_blank">@DZ_HJ</a></p>
+  </div>
+</div>
+
+<footer>
+  © 2025 Kolkof. جميع الحقوق محفوظة.
+</footer>
+
+<script>
+  function showSection(id) {
+    document.getElementById('summaries').style.display = 'none';
+    document.getElementById('tools').style.display = 'none';
+    document.getElementById('contact').style.display = 'none';
+    document.getElementById(id).style.display = 'block';
+  }
+
+  function searchContent() {
+    const query = document.getElementById("search").value.toLowerCase();
+    const items = document.querySelectorAll("#summaryList li");
+    items.forEach(item => {
+      item.style.display = item.textContent.toLowerCase().includes(query) ? "list-item" : "none";
     });
-  </script>
+  }
+</script>
+
 </body>
 </html>
